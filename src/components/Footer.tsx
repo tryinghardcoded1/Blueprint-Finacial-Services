@@ -21,18 +21,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           {/* Col 1: Brand & Bio (2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
-                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" opacity="0.3" />
-                  <path d="M12 6a6 6 0 0 0-6 6c0 2.2 1.2 4.1 3 5.2" />
-                  <path d="M12 10a2 2 0 0 0-2 2c0 .7.4 1.4 1 1.7" />
-                  <path d="M12 14a2 2 0 0 1 2-2c.7 0 1.4.4 1.7 1" />
-                  <path d="M18 12a6 6 0 0 0-6-6" />
-                </svg>
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white font-heading">
-                Blueprint Financial Services
-              </span>
+              <img
+                src="/images/logo.png"
+                alt="Blueprint Financial Services"
+                className="h-10 w-auto object-contain rounded shadow-sm"
+              />
             </div>
 
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">

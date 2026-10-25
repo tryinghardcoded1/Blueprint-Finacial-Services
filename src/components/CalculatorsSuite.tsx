@@ -9,14 +9,16 @@ import {
   Split,
   ChevronRight,
   ArrowRight,
+  LineChart,
 } from 'lucide-react';
+import { LoanComparisonVisualizer } from './LoanComparisonVisualizer';
 
 interface CalculatorsSuiteProps {
   onOpenBooking: () => void;
 }
 
 export const CalculatorsSuite: React.FC<CalculatorsSuiteProps> = ({ onOpenBooking }) => {
-  const [activeTab, setActiveTab] = useState<'repayment' | 'refinance' | 'stampDuty' | 'splitLoan' | 'extra'>('repayment');
+  const [activeTab, setActiveTab] = useState<'visualizer' | 'repayment' | 'refinance' | 'stampDuty' | 'splitLoan' | 'extra'>('visualizer');
 
   // Repayment state
   const [repLoanAmount, setRepLoanAmount] = useState<number>(750000);
@@ -211,6 +213,7 @@ export const CalculatorsSuite: React.FC<CalculatorsSuiteProps> = ({ onOpenBookin
         {/* Tab Controls */}
         <div className="flex items-center justify-start sm:justify-center overflow-x-auto gap-2 p-1.5 bg-slate-200/80 rounded-xl max-w-4xl mx-auto mb-10 border border-slate-300/80 no-scrollbar">
           {[
+            { id: 'visualizer', label: 'Loan Comparison (Interactive Chart)', icon: LineChart },
             { id: 'repayment', label: 'Loan Repayments', icon: Calculator },
             { id: 'refinance', label: 'Refinance Savings', icon: TrendingDown },
             { id: 'stampDuty', label: 'Stamp Duty (NSW)', icon: Building },
@@ -236,12 +239,14 @@ export const CalculatorsSuite: React.FC<CalculatorsSuiteProps> = ({ onOpenBookin
           })}
         </div>
 
-        {/* Calculator Body Container */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 sm:p-10 max-w-5xl mx-auto">
-          
-          {/* TAB 1: Repayment Calculator */}
-          {activeTab === 'repayment' && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Dynamic Display: Visualizer or Calculator Body Container */}
+        {activeTab === 'visualizer' ? (
+          <LoanComparisonVisualizer onOpenBooking={onOpenBooking} />
+        ) : (
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-lg p-6 sm:p-10 max-w-5xl mx-auto">
+            {/* TAB 1: Repayment Calculator */}
+            {activeTab === 'repayment' && (
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-5">
                 <div>
                   <div className="flex justify-between text-xs mb-1 font-medium">
@@ -740,6 +745,7 @@ export const CalculatorsSuite: React.FC<CalculatorsSuiteProps> = ({ onOpenBookin
           )}
 
         </div>
+        )}
 
       </div>
     </section>

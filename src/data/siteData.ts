@@ -47,7 +47,7 @@ export const BUSINESS_INFO = {
 
 export const NAV_LINKS: NavItem[] = [
   { label: 'Loan Types', href: '#services' },
-  { label: 'AI Loan Strategist', href: '#ai-calculator', badge: 'WOW' },
+  { label: 'AI Loan Strategist', href: '#ai-calculator' },
   { label: 'Calculators', href: '#calculators' },
   { label: 'Our Story', href: '#about' },
   { label: 'Learning Hub', href: '#learning-hub' },

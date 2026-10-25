@@ -130,6 +130,37 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   <div className="text-[11px] text-slate-400">Serving Sydney Eastern Suburbs & Nationwide</div>
                 </div>
               </div>
+
+              {/* Embedded Google Map */}
+              <div className="rounded-xl overflow-hidden border border-slate-800 bg-slate-950/90 shadow-lg">
+                <div className="px-3.5 py-2 bg-slate-950 border-b border-slate-800 flex items-center justify-between text-[11px]">
+                  <span className="font-semibold text-slate-300 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-blue-400" />
+                    <span>Blueprint Financial Services Location</span>
+                  </span>
+                  <a
+                    href="https://maps.google.com/?q=Blueprint+Financial+Services+Sydney"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Open in Maps ↗
+                  </a>
+                </div>
+                <div className="w-full h-56 sm:h-64 relative bg-slate-900">
+                  <iframe
+                    title="Blueprint Financial Services Location Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.1852845303783!2d151.20903030000002!3d-33.8591155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a32b4ff6873f%3A0x69a9991d707ab499!2sBlueprint%20Financial%20Services!5e0!3m2!1sen!2sph!4v1792970546545!5m2!1sen!2sph"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Regulatory Credentials */}

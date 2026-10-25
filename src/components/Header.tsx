@@ -14,26 +14,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
       {/* Strict 3-Zone Top Bar Contract */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-8">
         
-        {/* Zone 1: Single Brand Wordmark */}
-        <a href="#" className="flex items-center gap-3 shrink-0 group">
-          <div className="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 group-hover:border-blue-400 transition-colors">
-            {/* Architectural Blueprint Fingerprint / Compass Icon */}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" opacity="0.3" />
-              <path d="M12 6a6 6 0 0 0-6 6c0 2.2 1.2 4.1 3 5.2" />
-              <path d="M12 10a2 2 0 0 0-2 2c0 .7.4 1.4 1 1.7" />
-              <path d="M12 14a2 2 0 0 1 2-2c.7 0 1.4.4 1.7 1" />
-              <path d="M18 12a6 6 0 0 0-6-6" />
-            </svg>
-          </div>
-          <div>
-            <div className="text-xl font-bold tracking-tight text-white leading-none">
-              Blueprint
-            </div>
-            <div className="text-[10px] tracking-widest uppercase text-blue-400 font-medium mt-1">
-              Financial Services
-            </div>
-          </div>
+        {/* Zone 1: Official Logo */}
+        <a href="#" className="flex items-center shrink-0 group">
+          <img
+            src="/images/logo.png"
+            alt="Blueprint Financial Services"
+            className="h-10 sm:h-11 w-auto object-contain rounded shadow-sm hover:opacity-95 transition-opacity"
+          />
         </a>
 
         {/* Zone 2: 4-5 Concise Navigation Links */}

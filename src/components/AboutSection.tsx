@@ -29,11 +29,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
           
           {/* Left: Director Card & Accolades (5 cols) */}
           <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 to-blue-950 text-white rounded-2xl p-8 shadow-xl border border-slate-800 text-center relative overflow-hidden">
-            <div className="w-32 h-32 rounded-full mx-auto border-4 border-blue-400/40 p-1 bg-slate-800/80 mb-5 overflow-hidden shadow-lg">
-              {/* Director Avatar / Professional Silhouette or Badge */}
-              <div className="w-full h-full rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-bold font-heading">
-                KB
-              </div>
+            <div className="w-36 h-36 rounded-full mx-auto border-4 border-blue-400/50 p-1 bg-slate-800/80 mb-5 overflow-hidden shadow-xl">
+              <img
+                src="/images/karina.jpg"
+                alt="Karina Bridges - Owner & Director, Blueprint Financial Services"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
 
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold mb-3">
@@ -139,7 +140,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
 
             <div className="lg:col-span-6 min-h-[320px] relative">
               <img
-                src="/src/assets/images/sydney_family_new_home_1792967429198.jpg"
+                src="/images/family-home.jpg"
                 alt="Happy Australian homeowners outside modern residence in Sydney"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
