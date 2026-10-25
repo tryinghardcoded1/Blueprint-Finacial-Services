@@ -1,0 +1,6 @@
+{
+  "name": "Blueprint Financial Services | Sydney Mortgage Broker",
+  "description": "Sydney's trusted mortgage broker. Tailored home loans, refinancing, property investment finance, and AI loan strategy in Coogee & Greater Sydney. ACL 389087.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
